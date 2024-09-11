@@ -95,6 +95,7 @@ public class VaultSelector {
 
         VaultManager.getVaultOfPlayer(player, num, vault -> {
             if (vault != null) {
+                vault.reload();
                 replacements.put("%used%", "" + vault.getSlotsFilled());
                 replacements.put("%max%", "" + vault.getStorage().getSize());
 

@@ -19,7 +19,11 @@ public class PlayerCommand implements OrphanCommand {
     @DefaultFor({"~"})
     @AutoComplete("@vaults")
     public void axvault(@NotNull Player sender, @Optional Integer number) {
-        open(sender, number, false);
+        if(sender.hasPermission("axvaults.use")) {
+            open(sender, number, false);
+        }else{
+            MESSAGEUTILS.sendLang(sender, "no-permission");
+        }
     }
 
     public void open(@NotNull Player sender, @Optional @Range(min = 1) Integer number, boolean force) {

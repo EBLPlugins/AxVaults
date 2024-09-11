@@ -9,13 +9,13 @@ softdepend:
 
 permissions:
   axvaults.vault.1:
-    default: true
+    default: op
   axvaults.selector:
-    default: true
+    default: op
   axvaults.openremote:
-    default: true
+    default: op
   axvaults.itempicker:
-    default: true
+    default: op
   axvaults.admin.*:
     default: op
   axvaults.admin.reload:
